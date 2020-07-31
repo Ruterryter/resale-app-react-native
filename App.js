@@ -15,7 +15,9 @@ import {
   TouchableOpacity,
   Button,
   Dimensions,
+
 } from 'react-native';
+import { Card } from 'react-native-elements'
 import { useDimensions, useDeviceOrientation } from "@react-native-community/hooks"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import WelcomeScreen from './screens/WelcomeScreen';
@@ -29,15 +31,12 @@ export default function App() {
   const { landscape } = useDeviceOrientation();
 
   return (
-    <View style={{
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-    }}>
-      <SaleCard />
 
 
-    </View>
+    // <ViewImageScreen />
+    <WelcomeScreen />
+
+
 
   );
 }

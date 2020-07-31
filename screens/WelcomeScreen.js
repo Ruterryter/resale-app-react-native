@@ -33,21 +33,24 @@ export default function WelcomeScreen() {
         <Text style={styles.tagLine}
         >Sell what you don't need</Text>
       </View>
-      <ButtonEtt />
+      <View style={styles.buttonsContainer}>
+        <ButtonEtt title="Login" />
+        <ButtonEtt title="register" color="secondary" />
+      </View>
     </ImageBackground>
-
-
-
 
   );
 }
 
 const styles = StyleSheet.create({
   background: {
-    height: "100%",
-    width: "100%",
+    flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
+  },
+  buttonsContainer: {
+    padding: 20,
+    width: "100%",
   },
   logo: {
     width: 100,
@@ -60,6 +63,8 @@ const styles = StyleSheet.create({
   },
   tagLine: {
     fontWeight: "700",
+    fontSize: 20,
     marginTop: 5,
+    paddingVertical: 20,
   }
 })

@@ -1,47 +1,32 @@
-import { StyleSheet, Platform, Button, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 import colors from "../config/colors"
 
-const ButtonEtt = () => {
+const ButtonEtt = ({ title, onPress, color = "primary" }) => {
   return (
-    <>
-      <TouchableOpacity style={styles.loginButton} >
-        <Text style={styles.appButtonText}>Login</Text>
-      </TouchableOpacity>
 
-      <TouchableOpacity style={styles.registerButton} >
-        <Text style={styles.appButtonText}>Register</Text>
-      </TouchableOpacity>
-    </>
+    <TouchableOpacity style={[styles.button, { backgroundColor: colors[color] }]} onPress={onPress}>
+      <Text style={styles.appButtonText}>{title}</Text>
+    </TouchableOpacity>
+
   )
 }
 
 const styles = StyleSheet.create({
-  loginButton: {
-    borderRadius: 50,
-    textTransform: "uppercase",
-    width: "80%",
-    height: 45,
+  button: {
+    width: "100%",
     backgroundColor: colors.primary,
     alignItems: "center",
     justifyContent: "center",
-    margin: 12,
-  },
-  registerButton: {
-    borderRadius: 50,
-    textTransform: "uppercase",
-    width: "80%",
-    height: 45,
-    backgroundColor: colors.secondary,
-    alignItems: "center",
-    justifyContent: "center",
-    margin: 12,
+    marginVertical: 10,
+    padding: 15,
+    borderRadius: 25,
   },
   appButtonText: {
-    color: "white",
+    color: colors.white,
     textTransform: "uppercase",
     fontWeight: "600",
-
+    fontSize: 12,
   }
 })
 
