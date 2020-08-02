@@ -1,20 +1,21 @@
-import { StyleSheet, Platform, Button, Text, View, TouchableOpacity, } from 'react-native';
+import { StyleSheet, Platform, Button, Text, View, TouchableOpacity, Image } from 'react-native';
 import { Card } from 'react-native-elements'
 import React from 'react';
+import colors from "../config/colors"
+import AppText from "./AppText/AppText"
 
-const SaleCard = () => {
+const SaleCard = ({ title, subTitle, image }) => {
   return (
 
     <View style={styles.cardContainer}>
-      <>
-        <Card style={styles.card}
-          image={require("../assets/jacket.jpg")}
-          borderRadius={25}
-        >
-          <Text style={styles.cardTitle}>Red Jacket for Sale</Text>
-          <Text style={styles.subTitle}>$100</Text>
-        </Card>
-      </>
+
+      <View style={styles.card}>
+        <Image source={image} style={styles.image} />
+        <View style={styles.detailsContainer}>
+          <AppText styles={styles.title}>{title}</AppText>
+          <AppText style={styles.subTitle}>{subTitle}</AppText>
+        </View>
+      </View>
 
     </View>
   )
@@ -22,26 +23,33 @@ const SaleCard = () => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#fff",
-    width: "80%",
-    height: "40%",
+    backgroundColor: colors.white,
+    borderRadius: 15,
+    marginBottom: 20,
+    overflow: "hidden"
   },
-  cardTitle: {
-    fontSize: 15,
-    fontFamily: "Avenir",
+  detailsContainer: {
+    padding: 20,
   },
-  subTitle: {
-    color: "#4ecdc4",
-    paddingBottom: 20,
-    paddingTop: 10,
+  image: {
+    width: "100%",
+    height: 200,
   },
   cardContainer: {
     backgroundColor: "#f8f4f4",
     width: "100%",
-    height: "100%"
+    height: "100%",
+    padding: 20,
+    paddingTop: 100,
+  },
+  title: {
+    marginBottom: 7,
+  },
+  subTitle: {
+    color: colors.secondary,
+    fontWeight: "bold"
+
   }
-
-
 })
 
 export default SaleCard;

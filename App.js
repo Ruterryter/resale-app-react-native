@@ -26,17 +26,14 @@ import ViewImageScreen from './screens/ViewImageScreen';
 import AppText from "./components/AppText/AppText"
 import ButtonEtt from "./components/ButtonEtt"
 import SaleCard from "./components/SaleCard"
+import ListingDetailsScreen from './screens/ListingDetailsScreen';
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
 
   return (
 
-
-    // <ViewImageScreen />
-    <WelcomeScreen />
-
-
+    <ViewImageScreen />
 
   );
 }
