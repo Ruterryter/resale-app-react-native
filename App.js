@@ -23,17 +23,19 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import WelcomeScreen from './screens/WelcomeScreen';
 import ViewImageScreen from './screens/ViewImageScreen';
 
+
 import AppText from "./components/AppText/AppText"
 import ButtonEtt from "./components/ButtonEtt"
 import SaleCard from "./components/SaleCard"
 import ListingDetailsScreen from './screens/ListingDetailsScreen';
+import MessagesScreen from './screens/MessagesScreen';
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
 
   return (
 
-    <ViewImageScreen />
+    <MessagesScreen />
 
   );
 }
