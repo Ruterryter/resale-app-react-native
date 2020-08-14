@@ -1,19 +1,27 @@
 
 import React from "react";
-import { View, Image, StyleSheet } from 'react-native'
+import { View, Image, StyleSheet, TouchableHighlight } from 'react-native'
 import AppText from "../components/AppText/AppText";
+
+import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 import colors from "../config/colors"
 
-function ListItem({ title, subTitle, image }) {
+function ListItem({ title, subTitle, image, onPress, renderRightActions }) {
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={image} />
-      <View>
-        <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subTitle}>{subTitle}</AppText>
-      </View>
-    </View>
+    <Swipeable renderRightActions={renderRightActions}>
+      <TouchableHighlight
+        underlayColor={colors.light}
+        onPress={onPress}>
+        <View style={styles.container}>
+          <Image style={styles.image} source={image} />
+          <View>
+            <AppText style={styles.title}>{title}</AppText>
+            <AppText style={styles.subTitle}>{subTitle}</AppText>
+          </View>
+        </View>
+      </TouchableHighlight>
+    </Swipeable>
   )
 }
 
