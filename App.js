@@ -29,13 +29,14 @@ import ButtonEtt from "./components/ButtonEtt"
 import SaleCard from "./components/SaleCard"
 import ListingDetailsScreen from './screens/ListingDetailsScreen';
 import MessagesScreen from './screens/MessagesScreen';
+import MyAccountScreen from './screens/MyAccountScreen';
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
 
   return (
 
-    <MessagesScreen />
+    <MyAccountScreen />
 
   );
 }
