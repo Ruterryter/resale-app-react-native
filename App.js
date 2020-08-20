@@ -35,13 +35,14 @@ import MessagesScreen from './screens/MessagesScreen';
 import MyAccountScreen from './screens/MyAccountScreen';
 import ListItemSeparator from './components/ListItemSeparator';
 import AccountScreen from './screens/AccountScreen';
+import ListingsScreen from './screens/ListingsScreen';
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
 
   return (
 
-    <AccountScreen />
+    <ListingsScreen />
 
   );
 }

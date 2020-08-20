@@ -6,6 +6,8 @@ import Icon from '../components/Icon'
 import { StyleSheet, View, FlatList } from 'react-native';
 
 import colors from '../config/colors'
+import ListItemSeparator from '../components/ListItemSeparator';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const menuItems = [
   {
@@ -30,7 +32,7 @@ export default function AccountScreen(props) {
       <View style={styles.container}>
         <ListItem
           title="Blomman Blomberg"
-          subTitle="blomman.blomberg@gmail.com"
+          subTitle="blomman@gmail.com"
           image={require("../assets/profilblomma.jpg")} />
       </View>
 
@@ -38,6 +40,7 @@ export default function AccountScreen(props) {
         <FlatList
           data={menuItems}
           keyExtractor={menuItem => menuItem.title}
+          ItemSeparatorComponent={ListItemSeparator}
           renderItem={({ item }) =>
             <ListItem
               title={item.title}
@@ -48,7 +51,11 @@ export default function AccountScreen(props) {
           }
         />
       </View>
-
+      <ListItem
+        title="Log Out"
+        ImageComponent={
+          <Icon name="logout" backgroundColor={colors.yellow} />
+        } />
     </Screen>
   );
 }
