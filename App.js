@@ -1,5 +1,5 @@
 // import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -15,9 +15,9 @@ import {
   TouchableOpacity,
   Button,
   Dimensions,
-
-
+  TextInput
 } from 'react-native';
+
 import { Card } from 'react-native-elements'
 import { useDimensions, useDeviceOrientation } from "@react-native-community/hooks"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -36,13 +36,19 @@ import MyAccountScreen from './screens/MyAccountScreen';
 import ListItemSeparator from './components/ListItemSeparator';
 import AccountScreen from './screens/AccountScreen';
 import ListingsScreen from './screens/ListingsScreen';
+import AppTextInput from './components/AppTextInput'
 
 export default function App() {
-  const { landscape } = useDeviceOrientation();
+
 
   return (
 
-    <ListingsScreen />
+    <Screen>
+      <AppTextInput
+
+        placeholder="Username" icon="email"
+      />
+    </Screen>
 
   );
 }
