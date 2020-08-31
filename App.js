@@ -6,6 +6,7 @@ import {
   View,
   SafeAreaView,
   Platform,
+  Switch,
   Image,
   StatusBar,
   Alert,
@@ -37,17 +38,16 @@ import ListItemSeparator from './components/ListItemSeparator';
 import AccountScreen from './screens/AccountScreen';
 import ListingsScreen from './screens/ListingsScreen';
 import AppTextInput from './components/AppTextInput'
+import AppPicker from './components/AppPicker';
 
 export default function App() {
-
+  const [isNew, setIsNew] = useState(false);
 
   return (
 
     <Screen>
-      <AppTextInput
-
-        placeholder="Username" icon="email"
-      />
+      <AppPicker icon="apps" placeholder="Category" />
+      <AppTextInput icon="email" placeholder="Email" />
     </Screen>
 
   );
