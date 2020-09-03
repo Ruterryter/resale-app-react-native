@@ -26,7 +26,7 @@ const menuItems = [
   },
 ]
 
-export default function AccountScreen(props) {
+export const AccountScreen = (props) => {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>

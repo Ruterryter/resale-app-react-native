@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required().min(4).label("Password")
 });
 
-function LoginScreen(props) {
+export const LoginScreen = (props) => {
   return (
     <Screen style={styles.container}>
       <Image
@@ -70,7 +70,3 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   }
 })
-
-
-
-export default LoginScreen;

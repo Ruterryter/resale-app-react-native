@@ -20,7 +20,7 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import colors from "../config/colors"
 
-export default function ViewImageScreen() {
+export const ViewImageScreen = () => {
 
   return (
 

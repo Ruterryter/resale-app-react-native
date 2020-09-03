@@ -27,7 +27,7 @@ const initialMessages = [
   },
 ]
 
-export default function MessagesScreen() {
+export const MessagesScreen = () => {
   const [messages, setMessages] = useState(initialMessages);
   const [refreshing, setRefreshing] = useState(false);
 

@@ -8,7 +8,7 @@ import colors from '../config/colors';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import ListItemSeparator from '../components/ListItemSeparator';
 
-export default function MyAccountScreen({ onPress }) {
+export const MyAccountScreen = ({ onPress }) => {
   return (
     <View style={styles.background}>
       <MyPerson image={require("../assets/profilblomma.jpg")}
