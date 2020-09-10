@@ -3,11 +3,11 @@ import { StyleSheet, Image } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import ErrorMessage from '../components/ErrorMessage'
-import Screen from '../components/Screen'
-import AppTextInput from '../components/AppTextInput';
-import ButtonEtt from '../components/ButtonEtt'
-import AppText from '../components/AppText/AppText';
+import { ErrorMessage } from '../components/ErrorMessage'
+import { Screen } from '../components/Screen'
+import { AppTextInput } from '../components/AppTextInput';
+import { ButtonEtt } from '../components/ButtonEtt'
+
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),

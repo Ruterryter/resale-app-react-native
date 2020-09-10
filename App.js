@@ -19,35 +19,14 @@ import {
   TextInput
 } from 'react-native';
 
-import { Card } from 'react-native-elements'
-import { useDimensions, useDeviceOrientation } from "@react-native-community/hooks"
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import WelcomeScreen from './screens/WelcomeScreen';
-import ViewImageScreen from './screens/ViewImageScreen';
 
-import Screen from "./components/Screen"
-import ListItem from "./components/ListItem"
-import Icon from "./components/Icon"
-import AppText from "./components/AppText/AppText"
-import ButtonEtt from "./components/ButtonEtt"
-import SaleCard from "./components/SaleCard"
-import ListingDetailsScreen from './screens/ListingDetailsScreen';
-import MessagesScreen from './screens/MessagesScreen';
-import MyAccountScreen from './screens/MyAccountScreen';
-import ListItemSeparator from './components/ListItemSeparator';
-import AccountScreen from './screens/AccountScreen';
-import ListingsScreen from './screens/ListingsScreen';
-import AppTextInput from './components/AppTextInput'
-import AppPicker from './components/AppPicker';
-import LoginScreen from './screens/LoginScreen';
+import AccountScreen from './screens/AccountScreen'
 
-export default function App() {
-
-
+export const App = () => {
   return (
-
-    <LoginScreen />
-
+    <>
+      <AccountScreen />
+    </>
   );
 }
 
