@@ -1,4 +1,3 @@
-// import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import {
   StyleSheet,
@@ -19,13 +18,13 @@ import {
   TextInput
 } from 'react-native';
 
+import LoginScreen from './screens/LoginScreen'
 
-import AccountScreen from './screens/AccountScreen'
 
-export const App = () => {
+export default function App() {
   return (
     <>
-      <AccountScreen />
+      <LoginScreen />
     </>
   );
 }
