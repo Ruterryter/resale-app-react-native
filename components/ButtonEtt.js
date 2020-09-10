@@ -2,7 +2,7 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 import colors from "../config/colors"
 
-export const ButtonEtt = ({ title, onPress, color = "primary" }) => {
+const ButtonEtt = ({ title, onPress, color = "primary" }) => {
   return (
 
     <TouchableOpacity style={[styles.button, { backgroundColor: colors[color] }]} onPress={onPress}>
@@ -30,3 +30,4 @@ const styles = StyleSheet.create({
   }
 })
 
+export default ButtonEtt

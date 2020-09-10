@@ -21,7 +21,7 @@ import logoRed from "../assets/logoRed.png"
 import ButtonEtt from "../components/ButtonEtt"
 
 
-export const WelcomeScreen = () => {
+export default function WelcomeScreen() {
 
   return (
     <ImageBackground blurRadius={1.4} source={background}

@@ -7,7 +7,7 @@ import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 import colors from "../config/colors"
 
-export const ListItem = ({ title, subTitle, image, ImageComponent, onPress, renderRightActions }) => {
+export default function ListItem({ title, subTitle, image, ImageComponent, onPress, renderRightActions }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight

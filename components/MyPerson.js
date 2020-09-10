@@ -4,7 +4,7 @@ import { View, Image, StyleSheet, TouchableHighlight } from 'react-native'
 import AppText from "../components/AppText/AppText";
 import colors from "../config/colors";
 
-export const MyPerson = ({ title, subTitle, image, onPress }) => {
+export default function MyPerson({ title, subTitle, image, onPress }) {
   return (
 
     <View style={styles.container}>

@@ -21,7 +21,7 @@ const listings = [
   },
 ];
 
-export const ListingsScreen = (props) => {
+export default function ListingsScreen(props) {
 
   return (
     <Screen style={styles.screen}>

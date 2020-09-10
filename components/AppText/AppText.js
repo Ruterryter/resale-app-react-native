@@ -5,7 +5,7 @@ import colors from '../../config/colors'
 import defaultStyles from '../../config/styles'
 
 
-export const AppText = ({ children, style }) => {
+function AppText({ children, style }) {
   return (
     <Text style={[defaultStyles.text, style]}>
       {children}
@@ -14,3 +14,7 @@ export const AppText = ({ children, style }) => {
 }
 
 
+
+
+
+export default AppText;

@@ -10,7 +10,7 @@ import PickerItem from './PickerItem';
 
 
 
-export const AppPicker = ({ icon, items, onSelectItem, placeholder, selectedItem }) => {
+export default function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (

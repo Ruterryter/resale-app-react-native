@@ -3,7 +3,7 @@ import React from 'react';
 import colors from "../config/colors"
 import AppText from "./AppText/AppText"
 
-export const SaleCard = ({ title, subTitle, image }) => {
+export default function SaleCard({ title, subTitle, image }) {
   return (
     <View style={styles.card}>
       <Image style={styles.image} source={image} />
