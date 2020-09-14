@@ -19,12 +19,14 @@ import {
 } from 'react-native';
 
 import LoginScreen from './screens/LoginScreen'
+import ListingsScreen from './screens/ListingsScreen'
+import SaleCard from './components/SaleCard';
 
 
 export default function App() {
   return (
     <>
-      <LoginScreen />
+      <ListingsScreen />
     </>
   );
 }
